@@ -1,0 +1,33 @@
+{
+  "name": "noti-server",
+  "version": "1.0.0",
+  "description": "\"# Noti\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js --ignore tests",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longro3000/Noti.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/longro3000/Noti/issues"
+  },
+  "homepage": "https://github.com/longro3000/Noti#readme",
+  "dependencies": {
+    "concurrent": "^0.3.2",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.15",
+    "nodemon": "^1.18.7",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
+  }
+}
