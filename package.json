@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/longro3000/Noti#readme",
   "dependencies": {
-    "concurrent": "^0.3.2",
+    "concurrently": "^4.1.0",
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.4",
     "mongoose": "^5.3.15",
