@@ -1,0 +1,6 @@
+[submodule "Noti"]
+	path = Noti
+	url = https://github.com/longro3000/Noti.git
+[submodule "Client"]
+	path = Client
+	url = https://github.com/longro3000/Noti.git
