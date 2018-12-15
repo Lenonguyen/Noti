@@ -7,6 +7,9 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 import HomeIndex from './components/HomePage/home_index';
+//For Testing purposes
+import axios from 'axios';
+window.axios = axios;
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
