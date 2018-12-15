@@ -5,11 +5,16 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import promise from 'redux-promise';
 
+<<<<<<< HEAD
 import reducers from './reducers';
 import HomeIndex from './components/HomePage/home_index';
 //For Testing purposes
 import axios from 'axios';
 window.axios = axios;
+=======
+import reducers from 'reducers';
+import HomeIndex from 'components/HomePage/home_index';
+>>>>>>> nguyen
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
