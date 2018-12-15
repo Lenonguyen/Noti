@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import Header from 'components/globalComponents/header';
+import { connect } from 'react-redux';
 
-class home_index extends Component {
+class HomeIndex extends Component {
   render() {
     return (
-      <div>React simple starter</div>
+      <Header />
     );
   }
 }
+function mapStateToProps({}) {
+    return {};
+}
 
-export default home_index;
+export default connect(mapStateToProps)(HomeIndex);
