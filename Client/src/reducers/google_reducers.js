@@ -1,8 +1,8 @@
-import GOOGLE_AUTH from 'actions/';
+import { GOOGLE_AUTH } from 'actions/';
 
-export default function(state = null, action) {
+export default function(state = {}, action) {
   switch (action.type) {
-     case FETCH_USER:
+     case GOOGLE_AUTH:
           return action.payload || false;
      default:
           return state;

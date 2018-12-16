@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { googleAuth } from 'actions/';
 
 class Header extends Component{
-
-      renderGoogleAuth() => {
-          const {auth} = this.props;
+      componentDidMount() {
+          this.props.googleAuth();
+      }
+      renderGoogleAuth() {
+          const { auth } = this.props;
           switch (auth) {
-              case null:
+              case {}:
                 return;
               case false:
-                return (<a href = '/auth/google' className><button>Get started</button></a>);
+                return (
+                  <a href = '/auth/google' className = 'header__google-auth'>Get started</a>
+                );
               default:
                 return (
-
+                      <a href = '/api/logout' className = 'header__google-auth'>Log Out</a>
                 );
           }
       }
       render() {
-
         return (
           <div>
             <header className = 'header'>
@@ -26,14 +30,16 @@ class Header extends Component{
                 <img src = '' alt = 'logo' className = 'header__logo' />
               </div>
               <div>
+                { this.renderGoogleAuth() }
+              </div>
             </header>
           </div>
-      )
+      );
     }
 }
 
-function mapStateToProps ({auth}) {
-    return { auth };
+function mapStateToProps (state) {
+    return { auth : state.auth };
 }
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, { googleAuth })(Header);
