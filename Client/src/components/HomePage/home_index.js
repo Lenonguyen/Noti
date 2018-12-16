@@ -9,7 +9,7 @@ class HomeIndex extends Component {
     );
   }
 }
-function mapStateToProps({}) {
+function mapStateToProps(state) {
     return {};
 }
 

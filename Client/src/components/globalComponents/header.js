@@ -29,6 +29,9 @@ class Header extends Component{
               <div className = 'header__logo-box'>
                 <img src = '' alt = 'logo' className = 'header__logo' />
               </div>
+            <div className = 'header__search-box'>
+
+            </div>
               <div>
                 { this.renderGoogleAuth() }
               </div>
