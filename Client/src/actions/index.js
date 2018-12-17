@@ -11,7 +11,7 @@ export async function googleAuth() {
      };
 };
 
-export const searchNoti(values) {
+export function searchNoti(values) {
     const data = values;
     return {
       type: SEARCH_NOTI, payload: data
