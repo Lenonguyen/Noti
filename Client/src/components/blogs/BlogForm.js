@@ -31,7 +31,17 @@ class BlogForm extends Component {
      }
 };
 
+function validate(values) {
+     const errors = {};
+     _.each(formFields, ({name}) => {
+          if (!values[name]) {
+               errors[name] = 'You must provide a value';
+          }
+     });
+     return errors;
+}
 export default reduxForm({
+     validate,
      form: 'blogForm',
      destroyOnUnmount: false
 })(BlogForm);
