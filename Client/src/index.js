@@ -7,6 +7,8 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 import HomeIndex from './components/HomePage/home_index';
+import BlogNew from './components/blogs/BlogNew';
+
 //For Testing purposes
 import axios from 'axios';
 window.axios = axios;
@@ -17,6 +19,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
         <Switch>
+          <Route path='/blog/new' component={BlogNew}/>
           <Route path='/' component={HomeIndex}/>
         </Switch>
     </BrowserRouter>

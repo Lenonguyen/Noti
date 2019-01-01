@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 class HomeIndex extends Component {
   render() {
     return (
-      <Header />
+         <div>
+              <Header />
+         </div>
     );
   }
 }
