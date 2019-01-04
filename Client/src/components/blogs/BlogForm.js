@@ -41,10 +41,7 @@ class BlogForm extends Component {
           )
      }
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> nguyen
 function validate(values) {
      const errors = {};
      _.each(formFields, ({name}) => {
