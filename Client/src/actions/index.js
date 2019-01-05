@@ -25,8 +25,8 @@ export function searchNoti(values) {
 };
 
 export function postDiscussion(values, callback) {
-    const request = axios.post('/api/blogs', values).then( () => callback());
-
+    const request = axios.post('/api/blogs', values);
+    callback.push('/');
     return {
       type: POST_DISCUSSION,
       payload: request

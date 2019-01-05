@@ -10,13 +10,6 @@ import BlogField from './BlogField';
 import formFields from './formFields';
 
 class BlogForm extends Component {
-    onSubmit = (values) => {
-        const { history } = this.props;
-        this.props.postDiscussion(values, () => {
-          console.log('put success!');
-    });
-    }
-
      renderFields() {
           return _.map(formFields, ({ label, name }) => {
                return(
@@ -25,10 +18,10 @@ class BlogForm extends Component {
           });
      };
      render() {
-          const { handleSubmit } = this.props;
+          const { handleSubmit, onBlogSubmit } = this.props;
           return (
                <div>
-                    <form onSubmit={handleSubmit(this.onSubmit)}>
+                    <form onSubmit={handleSubmit(onBlogSubmit)}>
                          {this.renderFields()}
                          <Link to="/">
                               Cancel
