@@ -6,7 +6,7 @@ import { withRouter } from 'react-router';
 import formFields from './formFields';
 import * as actions from '../../actions';
 
-const BlogReview = ({ onCancel, formValues, postDiscussion, callback }) => {
+const BlogReview = ({ onCancel, formValues, postDiscussion, history }) => {
      const reviewField = _.map(formFields, ({name, label}) => {
           return(
                <div key={name}>
@@ -27,7 +27,7 @@ const BlogReview = ({ onCancel, formValues, postDiscussion, callback }) => {
                     Back
                </button>
                <button
-                    onClick={() => postDiscussion(formValues, callback)}
+                    onClick={() => postDiscussion(formValues, history)}
                >
                     Publish blog
                </button>
